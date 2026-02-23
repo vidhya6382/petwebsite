@@ -1,0 +1,174 @@
+/* Main Container */
+.cart-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 40px 80px;
+  min-height: 80vh;
+  background-color: #f9f9f9;
+}
+
+/* LEFT SIDE */
+.cart-left {
+  flex: 2;
+}
+
+.cart-left h2 {
+  margin-bottom: 20px;
+}
+
+/* Cart Item */
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.cart-item img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Item Info */
+.item-info {
+  flex: 1;
+}
+
+.item-info h4 {
+  margin-bottom: 5px;
+}
+
+.item-info p {
+  margin: 4px 0;
+  color: #555;
+}
+
+/* Quantity Section */
+.quantity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.quantity button {
+  width: 35px;
+  height: 35px;
+  border: none;
+  background: #1a4bff;
+  color: white;
+  font-size: 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.quantity button:hover {
+  background: #0f35c7;
+}
+
+.quantity span {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Remove Button */
+.remove-btn {
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  color: red;
+  cursor: pointer;
+}
+
+/* RIGHT SIDE (Summary) */
+.cart-right {
+  flex: 1;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  height: fit-content;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.cart-right h3 {
+  margin-bottom: 20px;
+}
+
+.cart-right p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.cart-right h2 {
+  margin-top: 20px;
+  color: #1a4bff;
+}
+
+/* Checkout Button */
+.checkout-btn {
+  width: 100%;
+  padding: 14px;
+  margin-top: 20px;
+  background: #1a4bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.checkout-btn:hover {
+  background: #0f35c7;
+}
+
+/* ========================= */
+/* 📱 RESPONSIVE DESIGN */
+/* ========================= */
+
+@media (max-width: 1024px) {
+  .cart-container {
+    padding: 30px 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cart-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cart-item img {
+    width: 100%;
+    height: auto;
+  }
+
+  .cart-right {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .quantity button {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+  }
+
+  .checkout-btn {
+    font-size: 14px;
+  }
+}

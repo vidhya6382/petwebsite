@@ -1,0 +1,176 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.pet-container {
+  font-family: Arial, sans-serif;
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 40vh;
+  min-height: 250px;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+/* SERVICES ICON BOX */
+.services-box {
+  background: white;
+  width: 90%;
+  margin: 3rem auto 2rem;   /* adds proper spacing */
+  padding: 1.5rem;
+  border-radius: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.service-card {
+  background: #38b000;
+  color: black;
+  flex: 1 1 120px;
+  max-width: 140px;
+  height: 110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.service-card svg {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+/* PET SERVICES TEXT */
+.pet-services {
+  background: #38b000;
+  padding: 2rem;
+  color: black;
+  text-align: center;
+}
+
+.pet-services p {
+  max-width: 700px;
+  margin: 0.5rem auto 0;
+}
+
+/* PROMO SECTION */
+.promo-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.promo-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Summer */
+.summer {
+  background: #1e3a8a;
+  color: white;
+  padding: 2rem;
+}
+
+.summer button {
+  background: white;
+  color: #1e3a8a;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 20px;
+  margin-top: 1rem;
+}
+
+/* Monthly */
+.monthly {
+  background: #90ee90;
+  padding: 2rem;
+}
+
+.monthly button {
+  background: #1e3a8a;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 20px;
+  margin-top: 1rem;
+}
+
+/* BOTTOM CARDS */
+.bottom-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.info-card {
+  border: 1px solid #ddd;
+  padding: 2rem;
+  text-align: center;
+}
+
+.info-card button {
+  background: #1e3a8a;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  margin-top: 1rem;
+}
+
+/* RESPONSIVE BREAKPOINTS */
+
+/* Mobile */
+@media (max-width: 480px) {
+  .hero {
+    height: 30vh;
+  }
+
+  .services-box {
+    margin-top: -2rem;
+  }
+}
+
+/* Tablet */
+@media (min-width: 481px) and (max-width: 768px) {
+  .hero {
+    height: 35vh;
+  }
+}
+
+/* Laptop */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero {
+    height: 38vh;
+  }
+}

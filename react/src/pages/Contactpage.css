@@ -1,0 +1,143 @@
+.contact-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.breadcrumb {
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.page-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.signin-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  background-color: #fafafa;
+}
+
+.signin-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.user-icon {
+  font-size: 30px;
+}
+
+.signin-btn {
+  background-color: #1e3a8a;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.section-title {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.quick-links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.quick-card {
+  flex: 1;
+  min-width: 250px;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+  background-color: white;
+}
+
+.quick-card .icon {
+  font-size: 22px;
+  color: #1e3a8a;
+}
+
+.quick-card h4 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.quick-card p {
+  margin: 2px 0 0;
+  font-size: 13px;
+  color: #555;
+}
+
+.quick-card .arrow {
+  position: absolute;
+  right: 15px;
+  font-size: 20px;
+  color: #1e3a8a;
+}
+
+.topics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.topic-card {
+  border: 1px solid #ddd;
+  padding: 18px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  cursor: pointer;
+}
+
+.get-touch {
+  margin-top: 30px;
+}
+
+.get-touch h3 {
+  margin-bottom: 10px;
+}
+
+.contact-info p {
+  margin: 8px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* 🔥 Fully Responsive */
+
+@media (max-width: 768px) {
+  .signin-box {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .quick-links {
+    flex-direction: column;
+  }
+}

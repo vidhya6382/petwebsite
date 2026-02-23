@@ -1,0 +1,177 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+}
+
+/* ================= HEADER ================= */
+header {
+  width: 100%;
+}
+
+/* ================= MAIN HEADER ================= */
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #1e3a8a;
+  padding: 15px 40px;
+  color: white;
+  flex-wrap: wrap;
+}
+
+.logo a {
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.search-bar {
+  width: 300px;
+  padding: 8px 15px;
+  border-radius: 20px;
+  border: none;
+}
+
+.right-links a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* ================= HAMBURGER ================= */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  background: #2b4db2;
+}
+
+.nav-links {
+  display: flex;
+  padding: 10px 40px;
+  gap: 25px;
+  position: relative;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav-item {
+  position: relative;
+  color: white;
+  cursor: pointer;
+}
+
+.nav-item a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+/* ================= MEGA MENU (DESKTOP) ================= */
+.mega-menu {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background: white;
+  color: black;
+  display: flex;
+  gap: 40px;
+  padding: 20px;
+  width: max-content;
+  max-width: 90vw;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+.mega-column {
+  display: flex;
+  flex-direction: column;
+  min-width: 150px;
+}
+
+.mega-column h4 {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.mega-column a {
+  text-decoration: none;
+  color: black;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+  .main-header {
+    padding: 15px 20px;
+  }
+
+  .search-bar {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .right-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+    color: white;
+  }
+
+  .navbar {
+    display: none;
+    width: 100%;
+  }
+
+  .navbar.active {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+    gap: 15px;
+  }
+
+  .nav-item {
+    width: 100%;
+  }
+
+  .mega-menu {
+    position: static;
+    width: 100%;
+    max-width: 100%;
+    flex-direction: column;
+    background: #f3f4f6;
+    box-shadow: none;
+    padding: 10px;
+    margin-top: 8px;
+    gap: 15px;
+  }
+
+  .mega-column {
+    width: 100%;
+  }
+
+}
+.nav-item{
+  text-decoration: none;
+}

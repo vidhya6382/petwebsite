@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "name": "Turkey Chickpeas & Sweet Potato Small Breed 2Kg",
+    "price": 345,
+    "brand": "Drools",
+    "size": "2kg",
+    "breed": "Small Breed",
+    "lifeStage": "Adult",
+    "rating": 4,
+    "category": "Food",
+    "image": "/images/d1.png"
+  },
+  {
+    "id": 2,
+    "name": "Zoodle Adult Dog Wet Food",
+    "price": 40,
+    "brand": "Zoodle",
+    "size": "100g",
+    "breed": "All Breeds",
+    "lifeStage": "Puppy",
+    "rating": 3,
+    "category": "Food",
+    "image": "/images/d2.png"
+  },
+  {
+    "id": 3,
+    "name": "Kennel Kitchen Dry Dog Food",
+    "price": 359,
+    "brand": "Kennel Kitchen",
+    "size": "3kg",
+    "breed": "All Breeds",
+    "lifeStage": "Adult",
+    "rating": 4,
+    "category": "Food",
+    "image": "/images/d3.png"
+  },
+  {
+    "id": 4,
+    "name": "Drools Puppy Dog Food Chicken & Egg",
+    "price": 265,
+    "brand": "Drools",
+    "size": "1.2kg",
+    "breed": "All Breeds",
+    "lifeStage": "Puppy",
+    "rating": 5,
+    "category": "Food",
+    "image": "/images/d4.png"
+  },
+  {
+    "id": 5,
+    "name": "Pedigree Adult & Puppy Dog Food",
+    "price": 314,
+    "brand": "Pedigree",
+    "size": "1kg",
+    "breed": "All Breeds",
+    "lifeStage": "Adult",
+    "rating": 4,
+    "category": "Food",
+    "image": "/images/d5.png"
+  },
+  {
+    "id": 6,
+    "name": "Drools Dog Spike Hard Ball Toy",
+    "price": 165,
+    "brand": "Drools",
+    "size": "Medium",
+    "breed": "All Breeds",
+    "lifeStage": "All",
+    "rating": 4,
+    "category": "Toys",
+    "image": "/images/d6.png"
+  },
+  {
+    "id": 7,
+    "name": "Natural Training Treats Chicken Flavor",
+    "price": 210,
+    "brand": "Natural",
+    "size": "500g",
+    "breed": "All Breeds",
+    "lifeStage": "Adult",
+    "rating": 5,
+    "category": "Training",
+    "image": "/images/d7.png"
+  },
+  {
+    "id": 8,
+    "name": "Himalaya Digyton Plus Syrup",
+    "price": 185,
+    "brand": "Himalaya",
+    "size": "200ml",
+    "breed": "All Breeds",
+    "lifeStage": "Adult",
+    "rating": 4,
+    "category": "Health",
+    "image": "/images/d8.png"
+  },
+  {
+    "id": 9,
+    "name": "JerHigh Chicken Sticks",
+    "price": 125,
+    "brand": "JerHigh",
+    "size": "150g",
+    "breed": "All Breeds",
+    "lifeStage": "Puppy",
+    "rating": 4,
+    "category": "Training",
+    "image": "/images/d9.png"
+  }
+]

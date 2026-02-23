@@ -1,0 +1,160 @@
+/* =========================
+   GLOBAL SAFETY
+========================= */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================
+   MAIN LAYOUT
+========================= */
+.dog-page {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1.25rem;
+  gap: 1.875rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+.sidebar {
+  flex: 0 0 15.625rem; /* 250px */
+  max-width: 15.625rem;
+  border-right: 1px solid #ddd;
+  padding-right: 1.25rem;
+  min-width: 0;
+}
+
+.filter-section {
+  margin-bottom: 1.25rem;
+}
+
+/* =========================
+   PRODUCTS SECTION
+========================= */
+.products-section {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.25rem;
+}
+
+/* =========================
+   CARD
+========================= */
+.card {
+  border: 1px solid #ddd;
+  padding: 0.9375rem;
+  text-align: center;
+  min-width: 0;
+}
+
+.card img {
+  width: 100%;
+  height: 9.375rem; /* 150px */
+  object-fit: contain;
+}
+
+.card button {
+  margin-top: 0.625rem;
+  background: blue;
+  color: white;
+  padding: 0.5rem;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* =========================
+   RESPONSIVE BREAKPOINTS
+========================= */
+
+/* -------- MOBILE 320px–480px -------- */
+@media (max-width: 480px) {
+
+  .dog-page {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .sidebar {
+    flex: 1 1 100%;
+    max-width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+    padding-right: 0;
+    padding-bottom: 1rem;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .top-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* -------- TABLET 481px–768px -------- */
+@media (min-width: 481px) and (max-width: 768px) {
+
+  .dog-page {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    flex: 1 1 100%;
+    max-width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 1rem;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* -------- LAPTOP 769px–1024px -------- */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sidebar {
+    flex: 0 0 14rem;
+    max-width: 14rem;
+  }
+}
+
+@media (min-width: 1025px) {
+
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}
