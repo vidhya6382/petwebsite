@@ -11,7 +11,7 @@ const navigate = useNavigate();
   const [selectedBreed, setSelectedBreed] = useState([]);
 const [selectedLifeStage, setSelectedLifeStage] = useState([]);
 const [selectedRating, setSelectedRating] = useState([]);
-  useEffect(() => {
+  useEffect(() => {                                                   
     fetch("/cat.json")
       .then((res) => res.json())
       .then((data) => {
