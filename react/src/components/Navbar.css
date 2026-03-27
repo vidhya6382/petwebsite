@@ -23,7 +23,9 @@ header {
   background: #1e3a8a;
   padding: 15px 40px;
   color: white;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* Allows items to wrap on smaller screens if needed */
+  position: relative; /* Needed for z-index of hamburger */
+  z-index: 1001; /* Ensure hamburger and logo are always on top */
 }
 
 .logo a {
@@ -33,57 +35,91 @@ header {
   text-decoration: none;
 }
 
+/* No longer needed as links are moved
 .search-bar {
   width: 300px;
   padding: 8px 15px;
   border-radius: 20px;
   border: none;
 }
+*/
 
+/* Removed as links are now inside .nav-links */
+/*
 .right-links a {
   color: white;
   margin-left: 20px;
   text-decoration: none;
   font-size: 14px;
 }
+*/
 
 /* ================= HAMBURGER ================= */
 .hamburger {
-  display: none;
+  display: none; /* Hidden on desktop */
   font-size: 24px;
   cursor: pointer;
+  color: white; /* Ensure it's white */
+  z-index: 1002; /* Ensure it's above everything */
 }
 
 /* ================= NAVBAR ================= */
 .navbar {
   background: #2b4db2;
+  position: relative; /* For proper mega-menu positioning */
+  z-index: 999; /* Below main-header, above content */
 }
 
 .nav-links {
   display: flex;
   padding: 10px 40px;
   gap: 25px;
-  position: relative;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* Allow wrapping on desktop if many items */
 }
 
+/* Base style for individual nav items */
 .nav-item {
   position: relative;
   color: white;
   cursor: pointer;
+  /* For non-mega-menu links like Home, About etc. */
+  text-decoration: none;
+  /* Default font size for desktop */
+  font-size: 15px;
 }
 
-.nav-item a {
+.nav-item-main-link {
   color: white;
   text-decoration: none;
   font-size: 15px;
+  display: block; /* Make the link fill the nav-item div */
+  padding: 5px 0; /* Add some padding for better click area */
+}
+
+/* General styling for all links within nav-links */
+.nav-links > .nav-item {
+  /* These are the direct Link components like Home, About, Consult a Vet */
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  display: block;
+  padding: 5px 0;
+}
+
+/* Style for links inside nav-item which have a mega-menu */
+.nav-item .nav-item-main-link {
+  display: block;
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  padding: 5px 0;
 }
 
 /* ================= MEGA MENU (DESKTOP) ================= */
 .mega-menu {
   position: absolute;
-  top: 40px;
+  top: 40px; /* Adjust based on your nav-links padding and height */
   left: 0;
   background: white;
   color: black;
@@ -92,8 +128,9 @@ header {
   padding: 20px;
   width: max-content;
   max-width: 90vw;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   z-index: 1000;
+  border-radius: 5px; /* Added some subtle rounding */
 }
 
 .mega-column {
@@ -105,43 +142,55 @@ header {
 .mega-column h4 {
   margin-bottom: 10px;
   font-size: 14px;
+  color: #1e3a8a; /* Making headers match main theme */
 }
 
 .mega-column a {
   text-decoration: none;
-  color: black;
+  color: #333; /* Darker text for readability */
   margin-bottom: 6px;
   font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.mega-column a:hover {
+  color: #2b4db2; /* Hover effect for mega menu links */
 }
 
 /* ================= MOBILE ================= */
 @media (max-width: 768px) {
-
   .main-header {
     padding: 15px 20px;
+    justify-content: space-between; /* Keep logo and hamburger apart */
   }
 
+  /* No longer needed
   .search-bar {
     width: 100%;
     margin-top: 10px;
   }
+  */
 
-  .right-links {
-    display: none;
-  }
+  /* This is what was hiding your top links! */
+  /* .right-links { display: none; } */
 
   .hamburger {
-    display: block;
-    color: white;
+    display: block; /* Show hamburger on mobile */
   }
 
   .navbar {
-    display: none;
+    display: none; /* Hide navbar by default on mobile */
+    position: absolute; /* Position it below the header */
+    top: 60px; /* Adjust this to sit right under your main header */
+    left: 0;
     width: 100%;
+    background: #2b4db2; /* Same background */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    z-index: 998; /* Ensure it's below the main-header but above content */
   }
 
   .navbar.active {
-    display: block;
+    display: block; /* Show navbar when active */
   }
 
   .nav-links {
@@ -153,25 +202,57 @@ header {
 
   .nav-item {
     width: 100%;
+    /* Override desktop hover effect for mobile if needed for consistent behavior */
+    onMouseEnter: none;
+    onMouseLeave: none;
+    /* Add padding for better touch targets */
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Separator */
+  }
+
+  /* Remove border for the last item */
+  .nav-links > .nav-item:last-child {
+    border-bottom: none;
+  }
+
+  .nav-item a,
+  .nav-item .nav-item-main-link {
+    font-size: 16px; /* Slightly larger for mobile readability */
+    padding: 0; /* Remove internal padding if nav-item has it */
   }
 
   .mega-menu {
-    position: static;
+    position: static; /* No absolute positioning on mobile */
     width: 100%;
     max-width: 100%;
     flex-direction: column;
-    background: #f3f4f6;
+    background: #f3f4f6; /* Lighter background for distinction */
     box-shadow: none;
     padding: 10px;
     margin-top: 8px;
     gap: 15px;
+    border-radius: 0; /* No rounding */
   }
 
   .mega-column {
     width: 100%;
   }
 
+  .mega-column h4 {
+    color: #2b4db2; /* Match sub-headings to navbar color */
+    margin-bottom: 5px;
+    font-size: 15px;
+  }
+
+  .mega-column a {
+    color: #555; /* Slightly lighter links in sub-menu */
+    font-size: 14px;
+    padding-left: 10px; /* Indent sub-links */
+  }
 }
-.nav-item{
-  text-decoration: none;
+
+/* Optional: Add hover effects for desktop nav-items */
+.nav-links > .nav-item:hover,
+.nav-item .nav-item-main-link:hover {
+  opacity: 0.8;
 }

@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Navbar from "./components/navbar";
-import Footer from "./components/footer";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import Consultvet from "./pages/Consultvet";
 import Aboutpage from "./pages/Aboutpage";
 import Login from "./pages/Login";
@@ -26,7 +26,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/contactpage" element={<Contactpage />} />
-         <Route path="/consultdoctor" element={<ConsultDoctor />} />
+        <Route path="/consultdoctor" element={<ConsultDoctor />} />
         <Route path="/consult" element={<Consultvet />} />
         <Route path="/aboutpage" element={<Aboutpage />} />
         <Route path="/petservice" element={<Petservice />} />

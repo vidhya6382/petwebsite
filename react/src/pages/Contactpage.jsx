@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./ContactPage.css";
+import "./Contactpage.css";
 import { FaTruck, FaUndo, FaComments, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 
 function ContactPage() {

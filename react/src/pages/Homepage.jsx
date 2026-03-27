@@ -16,7 +16,7 @@ import h13 from "../assets/h13.png";
 import h14 from "../assets/h14.png"; 
 import home1 from "../assets/home1.jpeg";
 import p1 from "../assets/p1.png";
-import "./HomePage.css";
+import "./Homepage.css";
 
 function HomePage() {
   const navigate = useNavigate();
